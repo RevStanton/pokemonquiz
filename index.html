@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which Pokémon Are You? | Personality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1 class="pokemon-title">Which Pokémon Are You?</h1>
+
+    <p class="intro-text">
+      Answer 12 quick questions to discover which Pokémon best matches your personality type!
+    </p>
+
+    <!-- ✅ Button to navigate to all results -->
+    <p style="margin-bottom: 20px;">
+      <a href="all-results.html" class="button">📜 View All Pokémon Types</a>
+    </p>
+
+    <form id="quiz-form">
+      <!-- E vs I -->
+      <div class="question">
+        <p>1. At a party, you’re most likely...</p>
+        <label><input type="radio" name="q1" value="E"> Mingling with everyone and telling stories</label>
+        <label><input type="radio" name="q1" value="I"> Hanging with a small group or observing quietly</label>
+      </div>
+
+      <div class="question">
+        <p>2. Your energy comes from...</p>
+        <label><input type="radio" name="q2" value="E"> Being around people and excitement</label>
+        <label><input type="radio" name="q2" value="I"> Alone time and quiet recharge moments</label>
+      </div>
+
+      <div class="question">
+        <p>3. Your ideal weekend involves...</p>
+        <label><input type="radio" name="q3" value="E"> A big social event or adventure with friends</label>
+        <label><input type="radio" name="q3" value="I"> A relaxing night at home or solo hobby time</label>
+      </div>
+
+      <!-- S vs N -->
+      <div class="question">
+        <p>4. When solving a problem, you...</p>
+        <label><input type="radio" name="q4" value="S"> Stick to proven methods and practical steps</label>
+        <label><input type="radio" name="q4" value="N"> Brainstorm creative or unusual solutions</label>
+      </div>
+
+      <div class="question">
+        <p>5. What do you notice first in a new place?</p>
+        <label><input type="radio" name="q5" value="S"> The physical details (layout, colors, people)</label>
+        <label><input type="radio" name="q5" value="N"> The vibe or overall feeling of the place</label>
+      </div>
+
+      <div class="question">
+        <p>6. Which describes you better?</p>
+        <label><input type="radio" name="q6" value="S"> Realistic, grounded in facts</label>
+        <label><input type="radio" name="q6" value="N"> Imaginative, always looking for possibilities</label>
+      </div>
+
+      <!-- T vs F -->
+      <div class="question">
+        <p>7. When making decisions, you rely more on...</p>
+        <label><input type="radio" name="q7" value="T"> Logic and what makes the most sense</label>
+        <label><input type="radio" name="q7" value="F"> Personal values and how it affects others</label>
+      </div>
+
+      <div class="question">
+        <p>8. Your friends describe you as...</p>
+        <label><input type="radio" name="q8" value="T"> Honest and straightforward, even if blunt</label>
+        <label><input type="radio" name="q8" value="F"> Caring and sensitive to their feelings</label>
+      </div>
+
+      <div class="question">
+        <p>9. If someone asks for advice, you...</p>
+        <label><input type="radio" name="q9" value="T"> Offer practical solutions</label>
+        <label><input type="radio" name="q9" value="F"> Offer emotional support and encouragement</label>
+      </div>
+
+      <!-- J vs P -->
+      <div class="question">
+        <p>10. Your ideal work style is...</p>
+        <label><input type="radio" name="q10" value="J"> Planned and organized with clear steps</label>
+        <label><input type="radio" name="q10" value="P"> Flexible, go with the flow</label>
+      </div>
+
+      <div class="question">
+        <p>11. When faced with a deadline, you...</p>
+        <label><input type="radio" name="q11" value="J"> Start early and keep everything on track</label>
+        <label><input type="radio" name="q11" value="P"> Work in bursts, maybe last minute, but get it done</label>
+      </div>
+
+      <div class="question">
+        <p>12. Packing for a trip, you...</p>
+        <label><input type="radio" name="q12" value="J"> Make a checklist and double-check</label>
+        <label><input type="radio" name="q12" value="P"> Toss things in your bag and figure it out later</label>
+      </div>
+
+      <button type="submit" class="button">See My Pokémon!</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
