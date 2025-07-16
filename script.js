@@ -1,7 +1,7 @@
 document.getElementById("quiz-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form from refreshing the page
+  event.preventDefault(); // Prevent the form from reloading the page
 
-  // Define MBTI dichotomies
+  // Define MBTI dichotomies scores
   let scores = {
     E: 0, I: 0,
     S: 0, N: 0,
@@ -12,13 +12,12 @@ document.getElementById("quiz-form").addEventListener("submit", function(event) 
   // Loop through all 12 questions
   for (let i = 1; i <= 12; i++) {
     const answer = document.querySelector(`input[name="q${i}"]:checked`);
-    
+
     if (!answer) {
       alert("Please answer all questions before submitting!");
-      return; // Stop if any question is unanswered
+      return; // Stop submission if any question is unanswered
     }
 
-    // Increment the chosen letter's score
     scores[answer.value]++;
   }
 
@@ -31,7 +30,10 @@ document.getElementById("quiz-form").addEventListener("submit", function(event) 
 
   console.log("Your MBTI type is:", type);
 
-  // Redirect to the correct result page
+  // Save result to localStorage (for "Your Result" link in nav)
+  localStorage.setItem("pokemonResult", type.toLowerCase());
+
+  // Redirect to the correct results page
   const resultsPage = `results/${type.toLowerCase()}.html`;
   window.location.href = resultsPage;
 });

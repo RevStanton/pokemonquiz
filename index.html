@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ✅ Navigation Bar -->
+  <nav class="main-nav">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="#" id="your-result-link" class="nav-link">⭐ Your Result</a>
+    <a href="all-results.html" class="nav-link">📜 View All Pokémon</a>
+  </nav>
+
   <div class="quiz-container">
     <h1 class="pokemon-title">Which Pokémon Are You?</h1>
-
     <p class="intro-text">
       Answer 12 quick questions to discover which Pokémon best matches your personality type!
-    </p>
-
-    <!-- ✅ Button to navigate to all results -->
-    <p style="margin-bottom: 20px;">
-      <a href="all-results.html" class="button">📜 View All Pokémon Types</a>
     </p>
 
     <form id="quiz-form">
@@ -101,5 +102,14 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // ✅ Load "Your Result" link from localStorage if available
+    const lastResult = localStorage.getItem("pokemonResult");
+    if (lastResult) {
+      document.getElementById("your-result-link").href = `results/${lastResult}.html`;
+    } else {
+      document.getElementById("your-result-link").style.display = "none";
+    }
+  </script>
 </body>
 </html>
